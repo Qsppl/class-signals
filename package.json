@@ -5,7 +5,8 @@
     "description": "OOP-Style events",
     "main": "",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "prepare": "husky || true",
+        "prettier:write": "prettier --config .prettierrc --log-level warn --write ."
     },
     "repository": {
         "type": "git",
@@ -25,5 +26,9 @@
     "bugs": {
         "url": "https://github.com/Qsppl/class-signals/issues"
     },
-    "homepage": "https://github.com/Qsppl/class-signals#readme"
+    "homepage": "https://github.com/Qsppl/class-signals#readme",
+    "devDependencies": {
+        "husky": "^9.1.7",
+        "prettier": "^3.6.2"
+    }
 }

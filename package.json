@@ -1,0 +1,29 @@
+{
+    "name": "class-signals",
+    "type": "module",
+    "version": "0.0.1",
+    "description": "OOP-Style events",
+    "main": "",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Qsppl/class-signals.git"
+    },
+    "keywords": [
+        "js",
+        "ts",
+        "events",
+        "emmit",
+        "dispatch",
+        "signals",
+        "oop"
+    ],
+    "author": "Tomokoo",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Qsppl/class-signals/issues"
+    },
+    "homepage": "https://github.com/Qsppl/class-signals#readme"
+}

@@ -1,3 +1,5 @@
+name: Release Job
+
 on:
   push:
     branches:
@@ -9,20 +11,19 @@ permissions:
   pull-requests: write
   issues: write # Новое разрешение для работы с метками
 
-name: release-please
-
 jobs:
-  release-please:
+  main:
     runs-on: ubuntu-latest
     steps:
       - uses: googleapis/release-please-action@v4
         id: release
         with:
           release-type: node
+
       # The logic below handles the npm publication:
       - uses: actions/checkout@v4
 
-      - name: tag major and minor versions
+      - name: Tag Major/Minor Versions
         if: ${{ steps.release.outputs.release_created }}
         run: |
           git config user.name github-actions[bot]
@@ -44,7 +45,9 @@ jobs:
         # these if statements ensure that a publication only occurs when
         # a new release is created:
         if: ${{ steps.release.outputs.release_created }}
-      - run: npm ci
+      - name: Publish To NPM
+        run: npm ci
         if: ${{ steps.release.outputs.release_created }}
-      - run: npm publish
+      - name: Publish To NPM
+        run: npm publish
         if: ${{ steps.release.outputs.release_created }}

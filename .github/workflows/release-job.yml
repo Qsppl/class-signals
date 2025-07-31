@@ -57,6 +57,8 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
       - run: npm ping
         if: ${{ steps.release.outputs.release_created }}
+      - run: npm cache clean --force
+        if: ${{ steps.release.outputs.release_created }}
       - name: Publish To NPM
         run: npm publish --loglevel verbose
         env:

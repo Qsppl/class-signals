@@ -17,5 +17,11 @@
     "[markdown]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "prettier.semi": false
+    "prettier.semi": false,
+    "task.allowAutomaticTasks": "on",
+    "typescript.tsdk": "node_modules/typescript/lib",
+    // windows task manager fix
+    "terminal.integrated.automationProfile.windows": {
+        "path": "C:/Windows/System32/cmd.exe"
+    }
 }

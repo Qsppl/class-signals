@@ -3,10 +3,12 @@
     "type": "module",
     "version": "0.0.1",
     "description": "OOP-Style events",
-    "main": "",
+    "main": "index.ts",
     "scripts": {
         "prepare": "husky || true",
-        "prettier:write": "prettier --config .prettierrc --log-level warn --write ."
+        "prettier:write": "prettier --config .prettierrc --log-level warn --write .",
+        "prettier:check": "prettier --config .prettierrc --log-level warn --check .",
+        "typescript:check": "tsc"
     },
     "repository": {
         "type": "git",
@@ -29,6 +31,7 @@
     "homepage": "https://github.com/Qsppl/class-signals#readme",
     "devDependencies": {
         "husky": "^9.1.7",
-        "prettier": "^3.6.2"
+        "prettier": "^3.6.2",
+        "typescript": "^5.8.3"
     }
 }

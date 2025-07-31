@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/Qsppl/class-signals/compare/v1.0.0...v1.1.0) (2025-07-31)
+
+
+### Features
+
+* test change for run release ([9939414](https://github.com/Qsppl/class-signals/commit/99394147b5b302e891973ba53b618a0c50648dae))
+
 ## 1.0.0 (2025-07-31)
 
 

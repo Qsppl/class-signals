@@ -13,8 +13,6 @@ permissions:
 
 jobs:
   main:
-    permissions:
-      id-token: write
     runs-on: ubuntu-latest
     environment: npm-publish
     steps:

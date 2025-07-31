@@ -11,7 +11,7 @@ on:
 
 jobs:
   node-install:
-    name: Prepare MPM cache
+    name: Prepare NPM Cache
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -22,7 +22,7 @@ jobs:
       - run: npm ci
 
   prettier:
-    name: Check formatting
+    name: Check Formatting
     needs: node-install
     runs-on: ubuntu-latest
     steps:
@@ -35,7 +35,7 @@ jobs:
       - run: npm run prettier:check
 
   typescript:
-    name: Check types
+    name: Check Types
     needs: node-install
     runs-on: ubuntu-latest
     steps:

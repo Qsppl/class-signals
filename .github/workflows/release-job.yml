@@ -55,8 +55,6 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
       - run: npm config get registry
         if: ${{ steps.release.outputs.release_created }}
-      - run: npm whoami
-        if: ${{ steps.release.outputs.release_created }}
       - run: npm ping
         if: ${{ steps.release.outputs.release_created }}
       - name: Publish To NPM

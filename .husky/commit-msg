@@ -7,3 +7,4 @@ then
 fi
 
 npm run prettier:write -- --no-color
+npm run typescript:check

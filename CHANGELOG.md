@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/Qsppl/class-signals/compare/v1.1.1...v1.1.2) (2025-07-31)
+
+
+### Bug Fixes
+
+* publishing to npm ([fbbe8d0](https://github.com/Qsppl/class-signals/commit/fbbe8d0e6353f3c268a387928c0e1c26d4c24403))
+
 ## [1.1.1](https://github.com/Qsppl/class-signals/compare/v1.1.0...v1.1.1) (2025-07-31)
 
 

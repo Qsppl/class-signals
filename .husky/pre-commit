@@ -6,5 +6,6 @@ then
     export PATH="$PATH:/c/Program Files/Git/usr/bin"
 fi
 
-commitlint --edit $1
-npm run typescript:check
+# Форматируем файлы и добавляем изменения в коммит
+npm run prettier:write -- --no-color
+git add -u

@@ -52,12 +52,17 @@ jobs:
         run: npm ci
         if: ${{ steps.release.outputs.release_created }}
       - run: npm owner ls class-signals
+        if: ${{ steps.release.outputs.release_created }}
       - run: npm access get status class-signals
+        if: ${{ steps.release.outputs.release_created }}
       - run: npm config get registry
+        if: ${{ steps.release.outputs.release_created }}
       - run: npm whoami
-      - run: npm try-publish
+        if: ${{ steps.release.outputs.release_created }}
       - run: echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > .npmrc
+        if: ${{ steps.release.outputs.release_created }}
       - run: npm ping
+        if: ${{ steps.release.outputs.release_created }}
       - name: Publish To NPM
         run: npm publish --loglevel verbose
         env:

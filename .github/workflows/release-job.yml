@@ -51,4 +51,7 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
       - name: Publish To NPM
         run: npm publish
+        env:
+          # Trusted Publishing:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         if: ${{ steps.release.outputs.release_created }}

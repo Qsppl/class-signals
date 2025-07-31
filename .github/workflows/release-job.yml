@@ -7,6 +7,7 @@ permissions:
   id-token: write # Это нужно для OIDC
   contents: write
   pull-requests: write
+  issues: write # Новое разрешение для работы с метками
 
 name: release-please
 

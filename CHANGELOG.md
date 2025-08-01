@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/Qsppl/class-signals/compare/v1.1.13...v2.0.0) (2025-08-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* general signals functionality
+
+### Features
+
+* general signals functionality ([b4c337b](https://github.com/Qsppl/class-signals/commit/b4c337b2fda651133cc24357f564497e079deb1a))
+
 ## [1.1.13](https://github.com/Qsppl/class-signals/compare/v1.1.12...v1.1.13) (2025-08-01)
 
 

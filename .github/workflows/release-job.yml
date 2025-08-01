@@ -53,7 +53,7 @@ jobs:
       - name: Publish To NPM
         # these if statements ensure that a publication only occurs when a new release is created:
         if: ${{ steps.release.outputs.release_created }}
-        run: npm config set //registry.npmjs.org/:_authToken=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
+        run: npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
       - name: Publish To NPM
         # these if statements ensure that a publication only occurs when a new release is created:
         if: ${{ steps.release.outputs.release_created }}

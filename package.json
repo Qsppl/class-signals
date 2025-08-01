@@ -3,7 +3,7 @@
     "type": "module",
     "version": "1.1.13",
     "description": "OOP-Style events",
-    "main": "index.ts",
+    "main": "feature.signals/signals.module.ts",
     "scripts": {
         "prepare": "husky || true",
         "prettier:write": "prettier --config .prettierrc --log-level warn --write .",
@@ -13,10 +13,6 @@
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Qsppl/class-signals.git"
-    },
-    "publishConfig": {
-        "registry": "https://registry.npmjs.org",
-        "access": "public"
     },
     "keywords": [
         "js",

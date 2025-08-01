@@ -6,10 +6,9 @@ on:
       - main
 
 permissions:
-  id-token: write # Это нужно для OIDC
   contents: write
   pull-requests: write
-  issues: write # Новое разрешение для работы с метками
+  issues: write
 
 jobs:
   main:
@@ -21,10 +20,12 @@ jobs:
         with:
           release-type: node
 
-      # The logic below handles the npm publication:
-      - uses: actions/checkout@v4
+      - # these if statements ensure that a publication only occurs when a new release is created:
+        if: ${{ steps.release.outputs.release_created }}
+        uses: actions/checkout@v4
 
       - name: Tag Major/Minor Versions
+        # these if statements ensure that a publication only occurs when a new release is created:
         if: ${{ steps.release.outputs.release_created }}
         run: |
           git config user.name github-actions[bot]
@@ -39,29 +40,21 @@ jobs:
           git push origin v${{ steps.release.outputs.major }}
           git push origin v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}
 
-      - uses: actions/setup-node@v4
+      - name: Publish To NPM
+        # these if statements ensure that a publication only occurs when a new release is created:
+        if: ${{ steps.release.outputs.release_created }}
+        uses: actions/setup-node@v4
         with:
           node-version: 20
-          registry-url: "https://registry.npmjs.org"
-        # these if statements ensure that a publication only occurs when
-        # a new release is created:
-        if: ${{ steps.release.outputs.release_created }}
       - name: Publish To NPM
+        # these if statements ensure that a publication only occurs when a new release is created:
+        if: ${{ steps.release.outputs.release_created }}
         run: npm ci
-        if: ${{ steps.release.outputs.release_created }}
-      - run: npm owner ls class-signals
-        if: ${{ steps.release.outputs.release_created }}
-      - run: npm access get status class-signals
-        if: ${{ steps.release.outputs.release_created }}
-      - run: npm config get registry
-        if: ${{ steps.release.outputs.release_created }}
-      - run: npm ping
-        if: ${{ steps.release.outputs.release_created }}
-      - run: npm cache clean --force
-        if: ${{ steps.release.outputs.release_created }}
       - name: Publish To NPM
-        run: npm publish --loglevel verbose
-        env:
-          # Trusted Publishing:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # these if statements ensure that a publication only occurs when a new release is created:
         if: ${{ steps.release.outputs.release_created }}
+        run: npm config set //registry.npmjs.org/:_authToken=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
+      - name: Publish To NPM
+        # these if statements ensure that a publication only occurs when a new release is created:
+        if: ${{ steps.release.outputs.release_created }}
+        run: npm publish

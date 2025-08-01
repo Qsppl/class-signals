@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.12](https://github.com/Qsppl/class-signals/compare/v1.1.11...v1.1.12) (2025-08-01)
+
+
+### Bug Fixes
+
+* update NPM authentication method ([d4b7ffb](https://github.com/Qsppl/class-signals/commit/d4b7ffb70ee65ee2a48a53f683e0f8649aa78e8b))
+
 ## [1.1.11](https://github.com/Qsppl/class-signals/compare/v1.1.10...v1.1.11) (2025-08-01)
 
 

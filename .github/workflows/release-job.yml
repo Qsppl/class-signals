@@ -6,6 +6,7 @@ on:
       - main
 
 permissions:
+  id-token: write # Required for OIDC
   contents: write
   pull-requests: write
   issues: write
@@ -49,11 +50,12 @@ jobs:
       - name: Publish To NPM
         # these if statements ensure that a publication only occurs when a new release is created:
         if: ${{ steps.release.outputs.release_created }}
-        run: npm ci
+        # Ensure npm 11.5.1 or later is installed
+        run: npm install -g npm@latest
       - name: Publish To NPM
         # these if statements ensure that a publication only occurs when a new release is created:
         if: ${{ steps.release.outputs.release_created }}
-        run: npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
+        run: npm ci
       - name: Publish To NPM
         # these if statements ensure that a publication only occurs when a new release is created:
         if: ${{ steps.release.outputs.release_created }}

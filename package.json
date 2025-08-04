@@ -3,7 +3,14 @@
     "type": "module",
     "version": "2.0.0",
     "description": "OOP-Style events",
+    "types": "feature.signals/signals.module.ts",
     "main": "feature.signals/signals.module.ts",
+    "exports": {
+        ".": {
+            "types": "./feature.signals/signals.module.ts",
+            "default": "./feature.signals/signals.module.ts"
+        }
+    },
     "scripts": {
         "prepare": "husky || true",
         "prettier:write": "prettier --config .prettierrc --log-level warn --write .",

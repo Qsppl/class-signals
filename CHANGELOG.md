@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/Qsppl/class-signals/compare/v2.0.0...v2.0.1) (2025-08-04)
+
+
+### Miscellaneous Chores
+
+* update package info ([66b5aed](https://github.com/Qsppl/class-signals/commit/66b5aed3c7f90ea184441dc28c335077052e9e1b))
+
 ## [2.0.0](https://github.com/Qsppl/class-signals/compare/v1.1.13...v2.0.0) (2025-08-01)
 
 

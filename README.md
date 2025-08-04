@@ -1,3 +1,7 @@
+[![npm version](https://img.shields.io/npm/v/class-signals.svg?style=flat&logo=npm&label=class-signals)](https://www.npmjs.com/package/class-signals)
+[![types](https://img.shields.io/npm/types/heavy-reactive?style=flat&logo=typescript&label=)](https://www.typescriptlang.org/)
+[![license](https://img.shields.io/npm/l/class-signals?style=flat)](https://github.com/your-username/class-signals/blob/main/LICENSE)
+
 # 🎯 signal-system
 
 > Reactive signaling for class-based TypeScript — safe, simple, and expressive.

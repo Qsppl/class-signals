@@ -7,7 +7,7 @@
             "option": "watch",
             "problemMatcher": ["$tsc-watch"],
             "group": "build",
-            "label": "tsc: watch - tsconfig.json",
+            "label": "Typescript Compiler",
             "runOptions": {
                 "runOn": "folderOpen"
             },

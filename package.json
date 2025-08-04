@@ -29,6 +29,10 @@
         "url": "https://github.com/Qsppl/class-signals/issues"
     },
     "homepage": "https://github.com/Qsppl/class-signals#readme",
+    "engines": {
+        "npm": "^11.2",
+        "node": "^23.9"
+    },
     "devDependencies": {
         "@commitlint/cli": "^19.8.1",
         "@commitlint/config-conventional": "^19.8.1",

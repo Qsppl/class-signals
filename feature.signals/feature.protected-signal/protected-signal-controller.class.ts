@@ -1,6 +1,6 @@
 import { ProtectedSignal } from "./protected-signal.class.ts"
 import { MononameEventTarget } from "../feature.mononame-event-target/mononame-event-target.class.ts"
-import { IActivable } from "../activable.interface.ts"
+import type { IActivable } from "../activable.interface.ts"
 
 /**
  * A controller for activating a protected signal, while exposing only a read-only interface to subscribers.

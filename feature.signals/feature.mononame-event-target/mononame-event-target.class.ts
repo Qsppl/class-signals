@@ -1,5 +1,5 @@
-import { EventHandler } from "./event-handler.interface.ts"
-import { EventCallback } from "./event-callback.interface.ts"
+import type { EventHandler } from "./event-handler.interface.ts"
+import type { EventCallback } from "./event-callback.interface.ts"
 import { Signal } from "../signal.class.ts"
 import { ProtectedSignal } from "../feature.protected-signal/protected-signal.class.ts"
 

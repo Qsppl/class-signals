@@ -1,5 +1,7 @@
+import type { ISubscribeOptions } from "../feature.subscriptions/interfaces/subscribe-options.interface.ts"
+import type { IUnsubscribeOptions } from "../feature.subscriptions/interfaces/unsubscribe-options.interface.ts"
 import { SubscribableSignal } from "../feature.subscriptions/subscribable-signal.class.ts"
-import { Subscriber, ISubscribeOptions, IUnsubscribeOptions } from "../signals.module.ts"
+import type { Subscriber } from "../feature.subscriptions/subscriber.type.ts"
 
 /**
  * A read-only reactive signal for observing internal events without triggering them.

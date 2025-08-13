@@ -1,7 +1,9 @@
-import { IActivable } from "./activable.interface.ts"
+import type { IActivable } from "./activable.interface.ts"
 import { MononameEventTarget } from "./feature.mononame-event-target/mononame-event-target.class.ts"
+import type { ISubscribeOptions } from "./feature.subscriptions/interfaces/subscribe-options.interface.ts"
+import type { IUnsubscribeOptions } from "./feature.subscriptions/interfaces/unsubscribe-options.interface.ts"
 import { SubscribableSignal } from "./feature.subscriptions/subscribable-signal.class.ts"
-import { Subscriber, ISubscribeOptions, IUnsubscribeOptions } from "./signals.module.ts"
+import type { Subscriber } from "./feature.subscriptions/subscriber.type.ts"
 
 /**
  * A fully reactive signal that allows both emitting and observing events.

@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.2](https://github.com/Qsppl/class-signals/compare/v2.0.1...v2.0.2) (2025-08-13)
+
+### Bug Fixes
+
+* change imports extensions to ts for compibility with bundlers ([c829a48](https://github.com/Qsppl/class-signals/commit/c829a4803a549990554771744f0f5c0cb8e5ded7))
+
+### Miscellaneous Chores
+
+* upgrade engine version ([7924ebf](https://github.com/Qsppl/class-signals/commit/7924ebfb4294dc45066c5b800ff4a6dcb76eb3ff))
+* add cross-platform compibility for bash scripts ([3d81374](https://github.com/Qsppl/class-signals/commit/3d81374fc3ef0ae895960c19b06dca6b7ac83e15))
+
 ## [2.0.1](https://github.com/Qsppl/class-signals/compare/v2.0.0...v2.0.1) (2025-08-04)
 
 

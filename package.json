@@ -1,7 +1,7 @@
 {
     "name": "class-signals",
     "type": "module",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "description": "OOP-Style events",
     "types": "feature.signals/signals.module.ts",
     "main": "feature.signals/signals.module.ts",

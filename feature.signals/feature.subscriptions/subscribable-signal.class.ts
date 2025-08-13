@@ -1,9 +1,9 @@
-import { EventCallback } from "../feature.mononame-event-target/event-callback.interface.js"
-import { MononameEventTarget } from "../feature.mononame-event-target/mononame-event-target.class.js"
-import { createListener } from "./create-listener.helper.js"
-import { ISubscribeOptions } from "./interfaces/subscribe-options.interface.js"
-import { IUnsubscribeOptions } from "./interfaces/unsubscribe-options.interface.js"
-import { Subscriber } from "./subscriber.type.js"
+import { EventCallback } from "../feature.mononame-event-target/event-callback.interface.ts"
+import { MononameEventTarget } from "../feature.mononame-event-target/mononame-event-target.class.ts"
+import { createListener } from "./create-listener.helper.ts"
+import { ISubscribeOptions } from "./interfaces/subscribe-options.interface.ts"
+import { IUnsubscribeOptions } from "./interfaces/unsubscribe-options.interface.ts"
+import { Subscriber } from "./subscriber.type.ts"
 
 /**
  * Abstract base class for objects that allow subscribers to be notified of events or changes.

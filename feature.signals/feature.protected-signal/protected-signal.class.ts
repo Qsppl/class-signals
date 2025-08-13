@@ -1,5 +1,5 @@
-import { SubscribableSignal } from "../feature.subscriptions/subscribable-signal.class.js"
-import { Subscriber, ISubscribeOptions, IUnsubscribeOptions } from "../signals.module.js"
+import { SubscribableSignal } from "../feature.subscriptions/subscribable-signal.class.ts"
+import { Subscriber, ISubscribeOptions, IUnsubscribeOptions } from "../signals.module.ts"
 
 /**
  * A read-only reactive signal for observing internal events without triggering them.

@@ -1,7 +1,7 @@
-import { EventHandler } from "./event-handler.interface.js"
-import { EventCallback } from "./event-callback.interface.js"
-import { Signal } from "../signal.class.js"
-import { ProtectedSignal } from "../feature.protected-signal/protected-signal.class.js"
+import { EventHandler } from "./event-handler.interface.ts"
+import { EventCallback } from "./event-callback.interface.ts"
+import { Signal } from "../signal.class.ts"
+import { ProtectedSignal } from "../feature.protected-signal/protected-signal.class.ts"
 
 /**
  * Internal event dispatcher that wraps `EventTarget` for a single fixed event type.

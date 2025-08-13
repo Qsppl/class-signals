@@ -1,5 +1,5 @@
-import { EventCallback } from "../feature.mononame-event-target/event-callback.interface.js"
-import { Subscriber } from "./subscriber.type.js"
+import { EventCallback } from "../feature.mononame-event-target/event-callback.interface.ts"
+import { Subscriber } from "./subscriber.type.ts"
 
 /**
  * Wraps a {@link Subscriber} into a standard event callback compatible with {@link EventTarget}.

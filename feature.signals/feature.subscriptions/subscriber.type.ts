@@ -1,5 +1,5 @@
-import { ISignalHandler } from "./interfaces/signal-handler.interface.js"
-import { ISignalCallback } from "./interfaces/signal-callback.interface.js"
+import { ISignalHandler } from "./interfaces/signal-handler.interface.ts"
+import { ISignalCallback } from "./interfaces/signal-callback.interface.ts"
 
 /**
  * A union type representing any valid subscriber to a signal.

@@ -1,4 +1,4 @@
-import { SubscribableSignal } from "../subscribable-signal.class.js"
+import { SubscribableSignal } from "../subscribable-signal.class.ts"
 
 /**
  * Options for configuring a signal subscription.

@@ -37,8 +37,8 @@
     },
     "homepage": "https://github.com/Qsppl/class-signals#readme",
     "engines": {
-        "npm": "^11.2",
-        "node": "^23.9"
+        "node": "^24",
+        "npm": "^11.2"
     },
     "devDependencies": {
         "@commitlint/cli": "^19.8.1",

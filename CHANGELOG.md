@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.1.0](https://github.com/Qsppl/class-signals/compare/v2.0.2...v2.1.0) (2026-11-15)
+
+
+### Features
+
+* contributing guide ([a86f7a9](https://github.com/Qsppl/class-signals/commit/a86f7a91a5ffba6cb769fab50559192d797d0617))
+
+
+### Bug Fixes
+
+* correct package name and install instructions in README ([ab8338f](https://github.com/Qsppl/class-signals/commit/ab8338fec46565cb37e04b272491de0c20f65e91))
+
 ## [2.0.2](https://github.com/Qsppl/class-signals/compare/v2.0.1...v2.0.2) (2025-08-13)
 
 ### Bug Fixes

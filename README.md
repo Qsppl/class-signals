@@ -1,7 +1,7 @@
 [![npm version](https://img.shields.io/npm/v/class-signals.svg?style=flat&logo=npm&label=class-signals)](https://www.npmjs.com/package/class-signals)
-[![license](https://img.shields.io/npm/l/class-signals?style=flat)](https://github.com/your-username/class-signals/blob/main/LICENSE)
+[![license](https://img.shields.io/npm/l/class-signals?style=flat)](https://github.com/Qsppl/class-signals/blob/main/LICENSE)
 
-# 🎯 signal-system
+# 🎯 class-signals
 
 > Reactive signaling for class-based TypeScript — safe, simple, and expressive.
 
@@ -11,10 +11,20 @@ Use it to **broadcast changes**, **listen to internal events**, and **expose rea
 
 ---
 
+## 📦 Install
+
+```bash
+npm install class-signals
+```
+
+The package ships as TypeScript source. Use it with a TypeScript-aware bundler such as Vite or esbuild, or with Bun; plain Node.js does not load `.ts` files from `node_modules`.
+
+---
+
 ## ⚡ Quick Example
 
 ```ts
-import { Signal } from "signal-system"
+import { Signal } from "class-signals"
 
 const onMessage = new Signal<string>()
 
@@ -106,6 +116,12 @@ class AuthService {
 const controller = new AbortController()
 signal.subscribe(fn, { signal: controller.signal })
 controller.abort()
+```
+
+### 1️⃣ One-time subscription
+
+```ts
+signal.subscribe(fn, { once: true })
 ```
 
 ### 🧱 Object-based subscribers

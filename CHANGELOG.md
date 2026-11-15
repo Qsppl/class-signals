@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/Qsppl/class-signals/compare/v2.1.0...v2.1.1) (2026-11-15)
+
+
+### Bug Fixes
+
+* restore npm publishing in release workflow ([9ffb636](https://github.com/Qsppl/class-signals/commit/9ffb63688214d7bff6308b8ed0678bd04c2cefc7))
+
 ## [2.1.0](https://github.com/Qsppl/class-signals/compare/v2.0.2...v2.1.0) (2026-11-15)
 
 

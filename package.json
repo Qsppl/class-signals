@@ -30,7 +30,7 @@
         "signals",
         "oop"
     ],
-    "author": "Tomokoo",
+    "author": "Artem Shumailov",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/Qsppl/class-signals/issues"

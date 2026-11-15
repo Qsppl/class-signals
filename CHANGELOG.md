@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.2](https://github.com/Qsppl/class-signals/compare/v2.1.1...v2.1.2) (2026-11-15)
+
+
+### Bug Fixes
+
+* support consumers with verbatimModuleSyntax enabled ([#25](https://github.com/Qsppl/class-signals/issues/25)) ([dcf625d](https://github.com/Qsppl/class-signals/commit/dcf625deb89ce617279a731e6ad64b84163221b1))
+
 ## [2.1.1](https://github.com/Qsppl/class-signals/compare/v2.1.0...v2.1.1) (2026-11-15)
 
 

@@ -3,15 +3,16 @@
     "type": "module",
     "version": "2.1.3",
     "description": "OOP-Style events",
-    "types": "feature.signals/signals.module.d.ts",
-    "main": "feature.signals/signals.module.js",
+    "types": "./.esm-build/signals.module.d.ts",
+    "main": "./.esm-build/signals.module.js",
     "exports": {
         ".": {
-            "types": "./feature.signals/signals.module.d.ts",
-            "default": "./feature.signals/signals.module.js"
+            "types": "./.esm-build/signals.module.d.ts",
+            "default": "./.esm-build/signals.module.js"
         }
     },
     "files": [
+        ".esm-build",
         "feature.signals"
     ],
     "scripts": {

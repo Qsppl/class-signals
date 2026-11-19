@@ -17,7 +17,7 @@ Use it to **broadcast changes**, **listen to internal events**, and **expose rea
 npm install class-signals
 ```
 
-The package ships as TypeScript source. Use it with a TypeScript-aware bundler such as Vite or esbuild, or with Bun; plain Node.js does not load `.ts` files from `node_modules`.
+The package ships compiled ES modules with type declarations and source maps, so it works as-is in Node.js (`import` and `require()`), Deno, Bun, bundlers such as Vite and webpack, and directly in the browser.
 
 ---
 

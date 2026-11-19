@@ -135,7 +135,5 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# Build output (emitted next to sources)
-feature.signals/**/*.js
-feature.signals/**/*.d.ts
-feature.signals/**/*.map
+# Compiled package output (published, not committed)
+.esm-build/

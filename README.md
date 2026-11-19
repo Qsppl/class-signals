@@ -17,7 +17,7 @@ Use it to **broadcast changes**, **listen to internal events**, and **expose rea
 npm install class-signals
 ```
 
-The package ships compiled ES modules with type declarations and source maps, so it works as-is in Node.js (`import` and `require()`), Deno, Bun, bundlers such as Vite and webpack, and directly in the browser.
+The package ships compiled ES modules with type declarations and source maps, so it works as-is in Node.js (`import` and `require()`), Deno, Bun, bundlers such as Vite and webpack, and directly in the browser. The typings do not depend on the DOM library, so Node.js projects compile without `lib: ["dom"]`.
 
 ---
 

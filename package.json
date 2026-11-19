@@ -3,19 +3,23 @@
     "type": "module",
     "version": "2.1.2",
     "description": "OOP-Style events",
-    "types": "feature.signals/signals.module.ts",
-    "main": "feature.signals/signals.module.ts",
+    "types": "feature.signals/signals.module.d.ts",
+    "main": "feature.signals/signals.module.js",
     "exports": {
         ".": {
-            "types": "./feature.signals/signals.module.ts",
-            "default": "./feature.signals/signals.module.ts"
+            "types": "./feature.signals/signals.module.d.ts",
+            "default": "./feature.signals/signals.module.js"
         }
     },
+    "files": [
+        "feature.signals"
+    ],
     "scripts": {
         "prepare": "husky || true",
         "prettier:write": "prettier --config .prettierrc --log-level warn --write .",
         "prettier:check": "prettier --config .prettierrc --log-level warn --check .",
-        "typescript:check": "tsc"
+        "typescript:check": "tsc",
+        "build": "tsc -p tsconfig.build.json"
     },
     "repository": {
         "type": "git",

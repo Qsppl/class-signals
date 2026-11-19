@@ -1,45 +1,8 @@
-#!/usr/bin/env bash
-
-# Функция для поиска пути к bash
-find_bash_path() {
-    local possible_paths=(
-        # Windows Git Bash
-        "/c/Program Files/Git/bin/bash.exe"
-        "/c/Program Files (x86)/Git/bin/bash.exe"
-
-        # Unix systems
-        "/usr/bin/bash"
-        "/bin/bash"
-
-        # PATH resolution
-        "$(command -v bash 2>/dev/null)"
-    )
-
-    for path in "${possible_paths[@]}"; do
-        if [ -x "$path" ]; then
-            echo "$path"
-            return 0
-        fi
-    done
-
-    return 1
-}
-
-# Функция проверки текущего интерпретатора
-is_current_path() {
-    [ "$1" = "$BASH" ]
-}
-
-# Перезапускаемся на правильном интерпритаторе если нужно
-bash_path=$(find_bash_path) || {
-    echo "Error: Could not find bash executable" >&2
-    exit 1
-}
-
-if ! is_current_path "$bash_path"; then
-    exec "$bash_path" "$0" "$@"
-fi
-
-# Основной код
-npm run prettier:write -- --no-color
-git add -u
+#!/bin/sh
+# Format staged files with Prettier and re-stage them.
+# Binaries are called directly (husky adds node_modules/.bin to PATH):
+# `npm run` kills the hook shell under GitHub Desktop's bundled Git.
+git diff --cached --name-only --diff-filter=ACMR -z \
+    | xargs -0 -r prettier --config .prettierrc --log-level warn --ignore-unknown --no-color --write --
+git diff --cached --name-only --diff-filter=ACMR -z \
+    | xargs -0 -r git add --

@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.3](https://github.com/Qsppl/class-signals/compare/v2.1.2...v2.1.3) (2026-11-19)
+
+
+### Bug Fixes
+
+* publish compiled js with type declarations ([#28](https://github.com/Qsppl/class-signals/issues/28)) ([8388528](https://github.com/Qsppl/class-signals/commit/83885281fb1440d84b9376fa73c1b569260ac5a4))
+
 ## [2.1.2](https://github.com/Qsppl/class-signals/compare/v2.1.1...v2.1.2) (2026-11-15)
 
 

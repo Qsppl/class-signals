@@ -1,0 +1,4 @@
+# Tarball of the library produced by `npm pack` in install-package.script.js.
+# Regenerated on every test run (it is what gets installed into node_modules here),
+# so it is a build artifact, not something to commit.
+.pack/

@@ -12,21 +12,21 @@ permissions:
   issues: write
 
 jobs:
-  main:
+  release:
     runs-on: ubuntu-latest
-    environment: npm-publish
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
     steps:
       - uses: googleapis/release-please-action@v4
         id: release
         with:
           release-type: node
 
-      # these if statements ensure that a publication only occurs when a new release is created:
+      # these if statements ensure that tagging only occurs when a new release is created:
       - if: ${{ steps.release.outputs.release_created }}
         uses: actions/checkout@v4
 
       - name: Tag Major/Minor Versions
-        # these if statements ensure that a publication only occurs when a new release is created:
         if: ${{ steps.release.outputs.release_created }}
         run: |
           git config user.name github-actions[bot]
@@ -37,30 +37,34 @@ jobs:
           git tag -fa "$MINOR" -m "Release $MINOR"
           git push -f origin "$MAJOR" "$MINOR"
 
+  # Mandatory gate: the package is published only if it works in every consumer environment.
+  integration-test:
+    needs: release
+    if: ${{ needs.release.outputs.release_created == 'true' }}
+    uses: ./.github/workflows/integration-test.yml
+
+  publish:
+    needs: [release, integration-test]
+    if: ${{ needs.release.outputs.release_created == 'true' }}
+    runs-on: ubuntu-latest
+    environment: npm-publish
+    steps:
+      - uses: actions/checkout@v4
+
       - name: Setup Node
-        # these if statements ensure that a publication only occurs when a new release is created:
-        if: ${{ steps.release.outputs.release_created }}
         uses: actions/setup-node@v4
         with:
           node-version: 24
 
       - name: Update npm
-        # these if statements ensure that a publication only occurs when a new release is created:
-        if: ${{ steps.release.outputs.release_created }}
         # Ensure npm 11.5.1 is installed
         run: npm install -g npm@11
 
       - name: Install dependencies
-        # these if statements ensure that a publication only occurs when a new release is created:
-        if: ${{ steps.release.outputs.release_created }}
         run: npm ci
 
       - name: Build
-        # these if statements ensure that a publication only occurs when a new release is created:
-        if: ${{ steps.release.outputs.release_created }}
         run: npm run build
 
       - name: Publish To NPM
-        # these if statements ensure that a publication only occurs when a new release is created:
-        if: ${{ steps.release.outputs.release_created }}
         run: npm publish

@@ -1,0 +1,16 @@
+{
+    "name": "class-signals-integration",
+    "private": true,
+    "type": "module",
+    "description": "Integration bench: installs the packed class-signals tarball and checks it in real consumer environments",
+    "scripts": {
+        "pretest": "node install-package.script.js",
+        "test": "node --test --test-reporter=spec \"feature.*/*.test.js\""
+    },
+    "devDependencies": {
+        "@arethetypeswrong/cli": "^0.18.5",
+        "@types/node": "^24.19.2",
+        "publint": "^0.3.25",
+        "typescript": "~5.8"
+    }
+}

@@ -19,11 +19,12 @@ npm install
 
 Useful scripts:
 
-| Script                     | What it does                  |
-| -------------------------- | ----------------------------- |
-| `npm run prettier:write`   | Format the code               |
-| `npm run prettier:check`   | Check formatting (as CI does) |
-| `npm run typescript:check` | Type-check the project        |
+| Script                     | What it does                                |
+| -------------------------- | ------------------------------------------- |
+| `npm run prettier:write`   | Format the code                             |
+| `npm run prettier:check`   | Check formatting (as CI does)               |
+| `npm run typescript:check` | Type-check the project                      |
+| `npm run test:integration` | Test the packed package as consumers see it |
 
 ## Commits
 
@@ -51,6 +52,6 @@ Releases are automated with [release-please](https://github.com/googleapis/relea
 
 1. After a `fix:` or `feat:` commit lands on `main`, release-please opens or updates a pull request named `chore(main): release X.Y.Z` with the new version and changelog.
 2. Review the changelog in that PR and merge it.
-3. The release job then creates the GitHub release and tags (`vX.Y.Z`, `vX.Y`, `vX`) and publishes the package to npm through trusted publishing (OIDC), with no npm token stored in the repository.
+3. The release job then creates the GitHub release and tags (`vX.Y.Z`, `vX.Y`, `vX`), runs the package integration tests, and only if they pass publishes the package to npm through trusted publishing (OIDC), with no npm token stored in the repository.
 
 Do not edit the version in `package.json` or `CHANGELOG.md` by hand: release-please owns both.

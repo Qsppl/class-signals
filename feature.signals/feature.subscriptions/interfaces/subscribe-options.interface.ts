@@ -1,10 +1,19 @@
-import { SubscribableSignal } from "../subscribable-signal.class.ts"
+import type { SubscribableSignal } from "../subscribable-signal.class.ts"
 
 /**
  * Options for configuring a signal subscription.
  *
- * This interface extends the standard `AddEventListenerOptions` to allow fine-grained control
- * over signal listener behavior. It is used as the second parameter in {@link SubscribableSignal.subscribe}.
+ * Used as the second parameter in {@link SubscribableSignal.subscribe}.
+ *
+ * @remarks
+ * Mirrors the DOM `AddEventListenerOptions` interface (which itself extends `EventListenerOptions`)
+ * field by field: the options are passed as-is to the underlying `EventTarget.addEventListener`.
+ * It does not `extend` the DOM interface on purpose: `AddEventListenerOptions` is not declared
+ * globally by `@types/node`, so inheriting from it would break Node.js consumers compiling
+ * without `lib.dom.d.ts`. Being structurally identical, an `AddEventListenerOptions` object
+ * can be passed wherever `ISubscribeOptions` is expected, and vice versa.
+ *
+ * @see {@link https://dom.spec.whatwg.org/#dictdef-addeventlisteneroptions | DOM Standard: AddEventListenerOptions}
  *
  * @example
  * // Remove after first call
@@ -15,7 +24,7 @@ import { SubscribableSignal } from "../subscribable-signal.class.ts"
  * signal.subscribe(fn, { signal: controller.signal })
  * controller.abort()
  */
-export interface ISubscribeOptions extends AddEventListenerOptions {
+export interface ISubscribeOptions {
     /** If `true`, the subscriber will be removed automatically after the first activation. */
     once?: boolean
 

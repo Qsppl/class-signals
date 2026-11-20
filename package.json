@@ -20,7 +20,8 @@
         "prettier:write": "prettier --config .prettierrc --log-level warn --write .",
         "prettier:check": "prettier --config .prettierrc --log-level warn --check .",
         "typescript:check": "tsc",
-        "build": "tsc -p tsconfig.build.json"
+        "build": "tsc -p tsconfig.build.json",
+        "test:integration": "npm --prefix feature.package-integration-testing test"
     },
     "repository": {
         "type": "git",

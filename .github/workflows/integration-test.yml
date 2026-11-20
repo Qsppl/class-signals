@@ -1,0 +1,34 @@
+name: Integration Test
+
+# Packs the library, installs the tarball and checks it as consumers see it: publint, attw,
+# the TypeScript compiler on a consumer across module resolution modes (skipLibCheck: false), and the Node.js runtime.
+# On pull requests it is informational: leave it out of the required checks in branch protection.
+# Release Job calls it before `npm publish`, where a failure blocks the publication.
+
+permissions:
+  contents: read
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  integration-test:
+    name: Consumer Environments
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: "npm"
+          cache-dependency-path: |
+            package-lock.json
+            feature.package-integration-testing/package-lock.json
+      - run: npm ci
+      - run: npm ci
+        working-directory: feature.package-integration-testing
+      - run: npm test
+        working-directory: feature.package-integration-testing

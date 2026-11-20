@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.4](https://github.com/Qsppl/class-signals/compare/v2.1.3...v2.1.4) (2026-11-20)
+
+
+### Bug Fixes
+
+* compile the package to separated folder so typings never resolve to sources ([#30](https://github.com/Qsppl/class-signals/issues/30)) ([b30a937](https://github.com/Qsppl/class-signals/commit/b30a937b8185237d221a1e330d51249072dc0e29))
+* make public typings independent of the DOM lib ([#32](https://github.com/Qsppl/class-signals/issues/32)) ([85d1b2d](https://github.com/Qsppl/class-signals/commit/85d1b2d5a02e7fbf18ca2d33a3658fcc550c634c))
+
 ## [2.1.3](https://github.com/Qsppl/class-signals/compare/v2.1.2...v2.1.3) (2026-11-19)
 
 
